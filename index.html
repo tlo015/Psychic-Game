@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Psychic</title>
+
+</head>
+<body>
+
+    <h1> The Psychic Game </h1>
+    <p> Guess what letter I am thinking of </p>
+
+    <div>
+        <p> Wins: <span id="wins"></span></p>
+        <p> Losses: <span id="losses"></span></p>
+        <p> Guesses Left: <span id="guessesLeft"></span></p>
+        <p> Your Guesses so far: <span id="userGuess"></span></p>
+    </div>
+
+<script type=text/javascript>
+
+ 
+
+// starting variables
+
+var wins= 0;
+
+var losses= 0;
+
+var guessesLeft= 9;
+
+var guessesSoFar = [];
+
+ 
+
+//function runs when user presses a key
+
+//grab the key that is pushed variable and
+
+//store user key
+
+//and displaying guess variable in array
+
+document.onkeyup = function (event){
+
+    var userGuess= event.key;
+
+    guessesSoFar.push(userGuess);
+
+    userGuess.textContent = guessesSoFar;
+
+ 
+
+//randomLetter variable and storing vairable in 'random'
+
+function randomLetter() {
+
+    var chars = "abcdefghijklmnopqrstuvwxyz";
+
+    return chars.substr(Math.floor(Math.random()*26), 1);
+
+}
+
+var random = randomLetter();
+
+ 
+
+if (userGuess === random)
+
+
+
+
+};
+
+ 
+
+ 
+
+</script>
